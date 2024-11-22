@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 export default function Todo() {
   const [todolist,settodolist]=useState(['Reading','Learncoding']);
   const [taskname,settaskname]=useState("");
@@ -13,7 +13,7 @@ export default function Todo() {
 
   }
   // handle input changes
-  const handletaskname=(e:any)=>{
+  const handletaskname=(e: ChangeEvent<HTMLInputElement>)=>{
     settaskname(e.target.value)
   };
   //delete task
